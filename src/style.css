@@ -618,7 +618,7 @@ table.apps td.name { font-weight: 900; }
   .head-actions .btn.ghost { display: none; }
   .band { padding: 52px 0; }
   .hero { padding: 30px 0 46px; }
-  .hero h1 { font-size: clamp(32px, 9.2vw, 44px); }
+  .hero h1 { font-size: clamp(31px, 8.8vw, 42px); }
   .hero-facts { margin-top: 26px; }
   .hero-facts li { padding: 10px 12px; }
   .hero-facts b { font-size: 13.5px; }
