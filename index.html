@@ -3,31 +3,503 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>별무리 러닝 홀리데이 · 준비 중 · BMR APPS</title>
-<meta name="description" content="별무리 러닝 홀리데이 — 준비 중인 페이지입니다 (BMR APPS)">
-<meta name="theme-color" content="#0abbee">
-<meta name="robots" content="noindex">
+<title>별무리 러닝 홀리데이 · 일하고, 배우고, 함께 사는 시간</title>
+<meta name="description" content="충남 금산 별무리 공동체에서 일하고 배우고 함께 사는 10개월, 별무리 러닝 홀리데이. 별무리 졸업생·교사선교회 예비 교사 3명을 모집합니다. 2026. 12. 1 ~ 12. 31 온라인 지원.">
+<meta name="theme-color" content="#FAF9F5">
+<meta property="og:title" content="별무리 러닝 홀리데이 · 일하고, 배우고, 함께 사는 시간">
+<meta property="og:description" content="일이 있고, 배움이 있고, 공동체가 있는 10개월. 충남 금산 별무리 공동체에서 함께할 청년 3명을 모집합니다.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./src/assets/hero-village.jpg">
 <link rel="icon" href="https://psupfmarnyxontorftio.supabase.co/functions/v1/hub-favicon?slug=learning-holliday">
 </head>
 <body>
-<!-- 준비 중 안내 페이지입니다. 앱을 만들면 이 파일(index.html)을 내 앱 화면으로 바꾸세요.
-     개발에 필요한 정보는 BMR APPS 허브의 '내 서비스 정보 → 개발 정보'와 저장소 README.md 에 있습니다. -->
-<header class="top">
-  <a class="mark" href="https://apps.bmrschool.net/" aria-label="BMR APPS 메인 화면"><span>BMR</span><span>APPS</span></a>
+<a class="skip" href="#apply">지원서로 바로 가기</a>
+
+<header class="site-head">
+  <a class="brand" href="./" aria-label="별무리 러닝 홀리데이 첫 화면">
+    <svg class="brand-mark" viewBox="0 0 40 40" role="img" aria-hidden="true" focusable="false">
+      <rect x="1.5" y="1.5" width="37" height="37" rx="4" fill="#FACC15" stroke="#111" stroke-width="3"/>
+      <g fill="#111">
+        <rect x="18" y="7" width="4" height="4"/><rect x="18" y="13" width="4" height="4"/>
+        <rect x="6" y="18" width="4" height="4"/><rect x="12" y="18" width="4" height="4"/>
+        <rect x="18" y="18" width="4" height="4"/><rect x="24" y="18" width="4" height="4"/>
+        <rect x="30" y="18" width="4" height="4"/><rect x="18" y="24" width="4" height="4"/>
+        <rect x="18" y="30" width="4" height="4"/><rect x="11" y="11" width="3" height="3"/>
+        <rect x="26" y="11" width="3" height="3"/><rect x="11" y="26" width="3" height="3"/>
+        <rect x="26" y="26" width="3" height="3"/>
+      </g>
+    </svg>
+    <span class="brand-text">
+      <b>별무리 <em>러닝 홀리데이</em></b>
+      <small>BMR LEARNING INSTITUTE · L.H</small>
+    </span>
+  </a>
+  <nav class="head-nav" aria-label="주요 메뉴">
+    <a href="#about">소개</a>
+    <a href="#program">프로그램</a>
+    <a href="#recruit">모집 안내</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="head-actions">
+    <button type="button" class="btn tiny ghost" data-open="admin" aria-label="지원자 관리 (관리자)">관리자</button>
+    <a class="btn primary" href="#apply">지원하기</a>
+  </div>
 </header>
-<main class="wrap">
-  <section class="hero">
-    <div class="copy">
-      <span class="eyebrow">준비 중</span>
-      <h1 data-app-name>별무리 러닝 홀리데이</h1>
-      <p class="desc" data-app-desc hidden></p>
-      <p class="notice"><b>준비 중인 페이지입니다.</b> 곧 이 주소에서 서비스를 열 예정이에요.</p>
-      <a class="btn" href="https://apps.bmrschool.net/">BMR APPS 서비스 둘러보기</a>
+
+<main id="main">
+
+  <!-- ================= 히어로 ================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="chips">
+        <span class="chip teal">별무리 교육연구소</span>
+        <span class="chip yellow">청년 과정 · L.H</span>
+      </div>
+      <p class="hero-kicker">일하고, 배우고, 함께 사는 시간</p>
+      <h1 id="hero-title"><span class="marker">별무리 러닝 홀리데이</span></h1>
+      <p class="hero-sub">워킹 홀리데이를 아시나요? 청년들의 일과 배움을 위한 거주 비자입니다.
+        금산 별무리에도 그런 시간이 있습니다. 별무리 공동체에 거주하며 일하고, 배우고, 함께 사는 <b>10개월</b>.</p>
+      <div class="hero-cta">
+        <a class="btn primary big" href="#apply">온라인 지원서 작성</a>
+        <a class="btn big" href="#program">프로그램 살펴보기</a>
+      </div>
+      <ul class="hero-facts">
+        <li><b>3명</b><span>모집 인원</span></li>
+        <li><b>2027. 3 ~ 12</b><span>활동 기간 · 10개월</span></li>
+        <li><b>최대 900만원</b><span>1년 장학금</span></li>
+        <li><b>학사관 숙식</b><span>충남 금산 · 별무리 공동체</span></li>
+      </ul>
     </div>
-    <div class="art" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i><i class="e"></i><i class="f"></i></div>
+
+    <div class="hero-art">
+      <div class="polaroid">
+        <span class="tape tape-a" aria-hidden="true"></span>
+        <span class="tape tape-b" aria-hidden="true"></span>
+        <img src="./src/assets/hero-village.jpg" width="1500" height="844"
+             alt="충남 금산 별무리학교 마을 전경 — 산자락 아래 학교 건물과 운동장, 공동체 주택이 모여 있다">
+        <p class="polaroid-cap">충남 금산 · 별무리학교 마을 전경</p>
+      </div>
+      <span class="pix pix-1" aria-hidden="true">
+        <svg viewBox="0 0 16 16"><g fill="#2563EB"><rect x="1" y="3" width="14" height="8"/></g><g fill="#111"><rect x="0" y="2" width="1" height="1"/><rect x="15" y="2" width="1" height="1"/><rect x="1" y="2" width="14" height="1"/><rect x="0" y="11" width="16" height="1"/><rect x="1" y="12" width="14" height="1"/><rect x="2" y="13" width="12" height="1"/><rect x="4" y="12" width="8" height="1"/></g><g fill="#FACC15"><rect x="3" y="4" width="10" height="5"/></g><g fill="#fff"><rect x="4" y="5" width="8" height="1"/><rect x="4" y="7" width="5" height="1"/></g><g fill="#111"><rect x="13" y="6" width="1" height="3"/></g></svg>
+      </span>
+      <span class="pix pix-2" aria-hidden="true">
+        <svg viewBox="0 0 16 16"><g fill="#0D9488"><rect x="1" y="3" width="6" height="2"/><rect x="1" y="5" width="2" height="8"/><rect x="1" y="12" width="14" height="2"/></g><g fill="#111"><rect x="2" y="2" width="12" height="2"/><rect x="2" y="4" width="2" height="7"/><rect x="2" y="11" width="12" height="2"/><rect x="14" y="4" width="2" height="7"/><rect x="8" y="4" width="2" height="7"/></g><g fill="#FACC15"><rect x="4" y="5" width="3" height="1"/><rect x="9" y="5" width="3" height="1"/></g></svg>
+      </span>
+      <span class="pix pix-3" aria-hidden="true">
+        <svg viewBox="0 0 16 16"><g fill="#FACC15"><rect x="7" y="0" width="2" height="4"/><rect x="7" y="12" width="2" height="4"/><rect x="0" y="7" width="4" height="2"/><rect x="12" y="7" width="4" height="2"/></g><g fill="#111"><rect x="5" y="5" width="6" height="6"/><rect x="6" y="4" width="4" height="1"/><rect x="6" y="11" width="4" height="1"/><rect x="4" y="6" width="1" height="4"/><rect x="11" y="6" width="1" height="4"/></g><g fill="#fff"><rect x="7" y="7" width="2" height="2"/></g></svg>
+      </span>
+      <span class="pix pix-4" aria-hidden="true">
+        <svg viewBox="0 0 16 16"><g fill="#F97316"><rect x="2" y="4" width="3" height="3"/><rect x="11" y="4" width="3" height="3"/><rect x="4" y="2" width="2" height="2"/><rect x="10" y="2" width="2" height="2"/><rect x="4" y="7" width="8" height="3"/><rect x="3" y="10" width="2" height="3"/><rect x="11" y="10" width="2" height="3"/></g><g fill="#111"><rect x="6" y="8" width="1" height="1"/><rect x="9" y="8" width="1" height="1"/></g></svg>
+      </span>
+      <span class="pix pix-5" aria-hidden="true">
+        <svg viewBox="0 0 16 16"><g fill="#111"><rect x="2" y="3" width="12" height="8"/><rect x="1" y="11" width="2" height="2"/></g><g fill="#fff"><rect x="3" y="4" width="10" height="6"/></g><g fill="#2563EB"><rect x="4" y="5" width="8" height="1"/><rect x="4" y="7" width="6" height="1"/></g><g fill="#0D9488"><rect x="6" y="12" width="4" height="2"/></g></svg>
+      </span>
+    </div>
+  </section>
+
+  <!-- ================= 소개 ================= -->
+  <section id="about" class="band" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow teal">워킹 홀리데이, 그 다음</span>
+        <h2 id="about-title">일이 있고, 배움이 있고,<br class="br-m"> 공동체가 있는 시간</h2>
+        <p class="lead">낯선 곳을 여행하는 대신, 한 공동체에 머물며 삶의 방향을 다시 세우는 청년 과정입니다.
+          학사관에서 살며 학교와 연구소의 일을 맡고, 별무리 아카데미에서 배우고, 코호트와 함께 살아갑니다.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="quote-card">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p>잠시 멈춰 서서<br>내 삶의 방향을 다시 그리고 싶은 청년에게,<br><b>일과 배움과 공동체가 있는 10개월</b>을 드립니다.</p>
+          <span class="quote-sign">별무리 교육연구소 · 청년 과정</span>
+        </div>
+        <div class="compare" role="group" aria-label="워킹 홀리데이와 별무리 러닝 홀리데이 비교">
+          <table>
+            <caption class="sr-only">워킹 홀리데이와 별무리 러닝 홀리데이 비교</caption>
+            <thead>
+              <tr><th scope="col">구분</th><th scope="col">워킹 홀리데이</th><th scope="col">별무리 러닝 홀리데이</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">성격</th><td>일과 체류를 위한 비자</td><td class="hl">일 · 배움 · 공동체를 함께하는 청년 과정</td></tr>
+              <tr><th scope="row">환경</th><td>낯선 땅에서의 경험</td><td class="hl">별무리 공동체에 거주하며 배우고 성장</td></tr>
+              <tr><th scope="row">중심</th><td>개인의 여행과 체류</td><td class="hl">성장과 소명</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <ul class="three-line">
+        <li><span class="dot yellow"></span><b>일이 있습니다</b> 교육 현장을 경험하는 인턴십</li>
+        <li><span class="dot blue"></span><b>배움이 있습니다</b> 세계관과 역량을 세우는 별무리 아카데미</li>
+        <li><span class="dot teal"></span><b>공동체가 있습니다</b> 같은 질문으로 연결되는 코호트 · 배움 공동체</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 세 가지 축 ================= -->
+  <section id="program" class="band alt" aria-labelledby="program-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow blue">세 가지 축</span>
+        <h2 id="program-title">일 · 배움 · 공동체</h2>
+        <p class="lead">러닝 홀리데이는 세 가지가 함께 돌아갑니다. 하나만 고르지 않아도 됩니다.</p>
+      </div>
+
+      <div class="axis-grid">
+        <article class="axis-card c-yellow">
+          <div class="axis-photo"><img src="./src/assets/axis-work.jpg" width="900" height="600" loading="lazy" alt="노트북과 태블릿으로 함께 수업을 준비하는 교실 풍경"></div>
+          <div class="axis-body">
+            <div class="axis-top"><span class="num">01</span><span class="axis-tag">인턴십 코스 · I.C</span></div>
+            <h3>일이 있습니다</h3>
+            <p class="axis-lead">단순한 아르바이트가 아니라, 교육 현장에서 실제 업무를 맡습니다.</p>
+            <ul class="ticks">
+              <li>학교 · 연구소 교육 현장 실무</li>
+              <li>배움 아카데미와 연계한 이론 · 실습</li>
+              <li>인턴십 과정 수료 인증</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="axis-card c-blue">
+          <div class="axis-photo"><img src="./src/assets/axis-learn.jpg" width="900" height="600" loading="lazy" alt="별무리학교 수업에서 학생들과 함께 듣고 이야기하는 모습"></div>
+          <div class="axis-body">
+            <div class="axis-top"><span class="num">02</span><span class="axis-tag">별무리 아카데미 · L.A</span></div>
+            <h3>배움이 있습니다</h3>
+            <p class="axis-lead">이론과 실무 역량을 깊이 세웁니다. 삶과 소명을 깨우는 배움.</p>
+            <ul class="ticks">
+              <li>기독교 교육 · 회복적 교육 · 맞춤형 교육 · 기업가 교육</li>
+              <li>양육형 소책자 · 수업형 과정</li>
+              <li>교직원 · 코호트가 함께하는 공통 과정</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="axis-card c-teal">
+          <div class="axis-photo"><img src="./src/assets/axis-community.jpg" width="900" height="600" loading="lazy" alt="국토순례 중 다리 위에서 함께 사진을 찍는 별무리 학생들"></div>
+          <div class="axis-body">
+            <div class="axis-top"><span class="num">03</span><span class="axis-tag">코호트 · 배움 공동체 L.C</span></div>
+            <h3>공동체가 있습니다</h3>
+            <p class="axis-lead">같은 질문으로 연결되는 사람들. 배움은 함께 있는 사이에서 자랍니다.</p>
+            <ul class="ticks">
+              <li>코호트 공동체 생활과 나눔</li>
+              <li>교과형 · 프로젝트형 · 동아리형</li>
+              <li>아카데미 · 인턴십과 연결되는 배움</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 아카데미 ================= -->
+  <section id="academy" class="band" aria-labelledby="academy-title">
+    <div class="wrap academy-wrap">
+      <div class="academy-copy">
+        <span class="eyebrow teal">배움의 자리 · 별무리 아카데미</span>
+        <h2 id="academy-title">삶과 소명을 깨우는 배움</h2>
+        <p class="lead">이론과 실무 역량을 깊이 세웁니다. 교직원과 코호트가 같은 과정을 함께 지나가며,
+          배운 것을 그날의 일과 삶에서 다시 확인합니다.</p>
+        <ul class="study-list">
+          <li><span class="badge-dot yellow">1</span><div><b>네 가지 교육</b><p>기독교 교육 · 회복적 교육 · 맞춤형 교육 · 기업가 교육</p></div></li>
+          <li><span class="badge-dot blue">2</span><div><b>두 가지 방식</b><p>양육형 소책자 · 수업형 과정</p></div></li>
+          <li><span class="badge-dot teal">3</span><div><b>함께하는 과정</b><p>교직원 · 코호트가 함께하는 공통 과정</p></div></li>
+        </ul>
+      </div>
+      <figure class="snap">
+        <span class="tape tape-c" aria-hidden="true"></span>
+        <img src="./src/assets/academy-circle.jpg" width="800" height="600" loading="lazy" alt="둥글게 둘러앉아 이야기를 나누는 별무리 공동체의 서클">
+        <figcaption>함께 둘러앉아 나누는 시간 · 회복적 서클</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 네 가지 가치 ================= -->
+  <section id="values" class="band alt" aria-labelledby="values-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow yellow">별무리의 교육</span>
+        <h2 id="values-title">네 가지 가치</h2>
+        <p class="lead">러닝 홀리데이의 배움은 별무리 교육의 네 가지 축 위에 서 있습니다.</p>
+      </div>
+      <div class="value-grid">
+        <article class="value-card v-yellow">
+          <span class="v-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><g fill="#111"><rect x="6" y="1" width="4" height="14"/><rect x="3" y="4" width="10" height="3"/></g></svg></span>
+          <h3>기독교 교육</h3>
+          <p>공동체 · 주재권 · 기독교 세계관</p>
+        </article>
+        <article class="value-card v-blue">
+          <span class="v-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><g fill="#111"><rect x="6" y="1" width="4" height="4"/><rect x="4" y="5" width="8" height="2"/><rect x="2" y="7" width="12" height="7"/></g><g fill="#FACC15"><rect x="7" y="9" width="2" height="4"/></g></svg></span>
+          <h3>맞춤형 교육</h3>
+          <p>제자도 · 양육 · 어드바이저</p>
+        </article>
+        <article class="value-card v-teal">
+          <span class="v-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><g fill="#111"><rect x="1" y="2" width="14" height="9"/><rect x="2" y="11" width="4" height="2"/><rect x="2" y="13" width="2" height="1"/></g><g fill="#fff"><rect x="2" y="3" width="12" height="7"/></g><g fill="#F97316"><rect x="5" y="4" width="2" height="2"/><rect x="9" y="4" width="2" height="2"/><rect x="5" y="6" width="6" height="2"/><rect x="7" y="8" width="2" height="1"/></g></svg></span>
+          <h3>회복적 교육</h3>
+          <p>샬롬 · 공동체 · 서클</p>
+        </article>
+        <article class="value-card v-orange">
+          <span class="v-icon" aria-hidden="true"><svg viewBox="0 0 16 16"><g fill="#111"><rect x="4" y="1" width="2" height="14"/><rect x="6" y="2" width="9" height="7"/><rect x="1" y="13" width="8" height="2"/></g><g fill="#F97316"><rect x="7" y="4" width="7" height="3"/></g></svg></span>
+          <h3>기업가 교육</h3>
+          <p>소명 · 개척 · 프로젝트</p>
+        </article>
+      </div>
+      <p class="motto">별무리 교육의 표어 — <b>하나님 나라를 위한 책임 있는 그리스도의 제자</b></p>
+    </div>
+  </section>
+
+  <!-- ================= 연계 흐름 ================= -->
+  <section id="flow" class="band" aria-labelledby="flow-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow blue">연계 흐름</span>
+        <h2 id="flow-title">거주에서 배움으로, 배움에서 실무로</h2>
+        <p class="lead">러닝 홀리데이는 별무리 청년 과정의 첫 문입니다. 살아 보고, 배우고, 일해 보는 순서로 이어집니다.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-box f-yellow">
+          <span class="flow-code">L.H</span>
+          <b>러닝 홀리데이</b>
+          <p>유입 · 거주 · 숙식</p>
+        </div>
+        <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 12"><g fill="#111"><rect x="0" y="4.5" width="15" height="3"/><rect x="14" y="2" width="3" height="8"/><rect x="17" y="0" width="3" height="12"/><rect x="20" y="3" width="2" height="6"/><rect x="22" y="4.5" width="2" height="3"/></g></svg></span>
+        <div class="flow-box f-blue">
+          <span class="flow-code">L.A · L.C</span>
+          <b>아카데미 · 배움 공동체</b>
+          <p>교육 · 연구 · 공동체</p>
+        </div>
+        <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 12"><g fill="#111"><rect x="0" y="4.5" width="15" height="3"/><rect x="14" y="2" width="3" height="8"/><rect x="17" y="0" width="3" height="12"/><rect x="20" y="3" width="2" height="6"/><rect x="22" y="4.5" width="2" height="3"/></g></svg></span>
+        <div class="flow-box f-teal">
+          <span class="flow-code">I.C</span>
+          <b>인턴십 코스</b>
+          <p>실무 실습 · 인증</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 모집 안내 ================= -->
+  <section id="recruit" class="band recruit-band" aria-labelledby="recruit-title">
+    <div class="wrap">
+      <div class="recruit">
+        <div class="recruit-head">
+          <span class="tab">모집 안내</span>
+          <span id="recruit-state" class="state-chip">모집 예정</span>
+        </div>
+        <h2 id="recruit-title">별무리 러닝 홀리데이 · 2027년 청년 과정</h2>
+        <dl class="recruit-list">
+          <div><dt>모집 대상</dt><dd><b>별무리 졸업생, 교사선교회 예비 교사</b></dd></div>
+          <div><dt>모집 인원</dt><dd><b>3명</b></dd></div>
+          <div><dt>모집 기간</dt><dd><b>2026. 12. 1 ~ 12. 31</b></dd></div>
+          <div><dt>활동 기간</dt><dd><b>2027. 3. ~ 2027. 12.</b> <span class="dim">(10개월)</span></dd></div>
+          <div><dt>장소</dt><dd><b>충남 금산 · 별무리 공동체</b><br><span class="dim">학사관 거주 · 숙식 제공</span></dd></div>
+          <div><dt>지원 · 장학금</dt><dd><b>1년 최대 900만원 장학금 지급</b><br><span class="dim">인턴 연구원 및 생태, 문화, 연구 파트 업무 수행</span></dd></div>
+          <div><dt>신청 방법</dt><dd>이 페이지에서 온라인 지원서 작성 · 제출</dd></div>
+          <div><dt>문의</dt><dd>조은길 <a href="tel:+821045174164">010-4517-4164</a></dd></div>
+        </dl>
+        <div class="recruit-foot">
+          <p>지원서는 약 15분이면 쓸 수 있습니다. 정답은 없으니 지금의 생각을 편하게 적어 주세요.</p>
+          <a class="btn primary big" href="#apply">지원서 작성하기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="band alt" aria-labelledby="faq-title">
+    <div class="wrap narrow">
+      <div class="sec-head">
+        <span class="eyebrow teal">자주 묻는 질문</span>
+        <h2 id="faq-title">FAQ</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>러닝 홀리데이와 인턴십 코스는 무엇이 다른가요?</summary>
+          <p>러닝 홀리데이(L.H)는 별무리에 거주하며 배우고 성장하는 청년 과정 전체입니다. 그 안에서 실무를 배우는 과정이 인턴십 코스(I.C)이고, 배움 아카데미(L.A)와 배움 공동체(L.C)가 함께 운영됩니다.</p>
+        </details>
+        <details>
+          <summary>배움은 어떤 방식으로 이루어지나요?</summary>
+          <p>양육형 · 강의형으로 운영되는 배움 아카데미와 교과형 · 프로젝트형 · 동아리형 배움 공동체에 교직원 · 코호트와 함께 참여합니다. 인턴십의 실무 경험과 연결해 이론과 실제를 함께 세웁니다.</p>
+        </details>
+        <details>
+          <summary>숙식은 지원되나요?</summary>
+          <p>러닝 홀리데이는 일정 인원에 대해 숙식을 제공합니다.</p>
+        </details>
+        <details>
+          <summary>신앙이 없어도 지원할 수 있나요?</summary>
+          <p>별무리는 기독교 대안학교로, 기독교 세계관이 교육의 중심축입니다. 공동체 예배와 생활 리듬을 함께하며, 세부 지원 자격은 확정한 뒤 안내드립니다.</p>
+        </details>
+      </div>
+      <p class="faq-more">더 궁금한 점은 <a href="tel:+821045174164">조은길 010-4517-4164</a>로 연락 주세요.</p>
+    </div>
+  </section>
+
+  <!-- ================= 지원서 ================= -->
+  <section id="apply" class="band apply-band" aria-labelledby="apply-title">
+    <div class="wrap narrow">
+      <div class="sec-head">
+        <span class="eyebrow yellow">온라인 지원</span>
+        <h2 id="apply-title">별무리 러닝 홀리데이 지원서</h2>
+        <p class="lead">로그인 없이 바로 작성하고 제출할 수 있습니다. 작성 시간은 약 15분입니다.</p>
+      </div>
+
+      <form id="apply-form" class="apply-form" novalidate>
+        <div class="form-note">
+          <b>제출 전에 확인해 주세요.</b> 모집 기간은 2026. 12. 1 ~ 12. 31이고, 활동 기간은 2027. 3. ~ 2027. 12.(10개월)입니다.
+          제출하시면 접수 번호가 나옵니다. 그 번호를 꼭 저장해 주세요.
+        </div>
+
+        <fieldset>
+          <legend><span class="leg-num">1</span> 기본 정보</legend>
+          <div class="fields">
+            <label class="field"><span>이름 <i>필수</i></span><input name="name" type="text" required maxlength="60" autocomplete="name" placeholder="홍길동"></label>
+            <label class="field"><span>생년월일 <i>필수</i></span><input name="birth_date" type="date" required></label>
+            <label class="field"><span>휴대전화 <i>필수</i></span><input name="phone" type="tel" required maxlength="30" autocomplete="tel" placeholder="010-0000-0000"></label>
+            <label class="field"><span>이메일 <i>필수</i></span><input name="email" type="email" required maxlength="160" autocomplete="email" placeholder="you@example.com"></label>
+            <label class="field"><span>현재 거주지</span><input name="address" type="text" maxlength="200" placeholder="시 · 군까지"></label>
+            <label class="field"><span>소속</span><input name="affiliation" type="text" maxlength="200" placeholder="학교 · 직장 · 활동 단체 (없으면 '없음')"></label>
+            <label class="field full"><span>지원 경로</span>
+              <select name="apply_route">
+                <option value="">고르지 않아도 됩니다</option>
+                <option>별무리 홈페이지</option>
+                <option>SNS(인스타그램 등)</option>
+                <option>지인 소개</option>
+                <option>교회 · 기관</option>
+                <option>기타</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="leg-num">2</span> 지원 구분과 희망 파트</legend>
+          <div class="fields">
+            <div class="field full">
+              <span>지원 구분 <i>필수</i></span>
+              <div class="radio-row">
+                <label class="pick"><input type="radio" name="category" value="별무리 졸업생" required><span>별무리 졸업생</span></label>
+                <label class="pick"><input type="radio" name="category" value="교사선교회 예비 교사" required><span>교사선교회 예비 교사</span></label>
+                <label class="pick"><input type="radio" name="category" value="기타" required><span>기타</span></label>
+              </div>
+            </div>
+            <div class="field full">
+              <span>희망 파트 <i>필수</i></span>
+              <div class="radio-row">
+                <label class="pick"><input type="radio" name="part" value="생태" required><span>생태</span></label>
+                <label class="pick"><input type="radio" name="part" value="문화" required><span>문화</span></label>
+                <label class="pick"><input type="radio" name="part" value="연구" required><span>연구</span></label>
+                <label class="pick"><input type="radio" name="part" value="무관" required><span>무관</span></label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="leg-num">3</span> 학력 · 경력</legend>
+          <div class="fields">
+            <label class="field full"><span>학력</span><textarea name="education" rows="3" maxlength="2000" placeholder="최종 학력과 전공을 적어 주세요."></textarea></label>
+            <label class="field full"><span>경력 · 활동</span><textarea name="career" rows="3" maxlength="2000" placeholder="일한 경험, 활동, 프로젝트 등. 없어도 괜찮습니다."></textarea></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="leg-num">4</span> 자기소개와 지원 동기</legend>
+          <p class="legend-help">정답은 없습니다. 지금의 생각을 편하게 적어 주세요.</p>
+          <div class="fields">
+            <label class="field full"><span>1. 간단한 자기소개 <i>필수</i></span><textarea name="q_self" rows="4" required maxlength="5000" placeholder="지금 어떤 시간을 보내고 있는지, 무엇을 해 왔는지 적어 주세요."></textarea></label>
+            <label class="field full"><span>2. 러닝 홀리데이에 지원한 이유 <i>필수</i></span><textarea name="q_motive" rows="5" required maxlength="5000" placeholder="3~5문장이면 충분합니다."></textarea></label>
+            <label class="field full"><span>3. 이 시간에 이루고 싶은 것 <i>필수</i></span><textarea name="q_plan" rows="5" required maxlength="5000" placeholder="배우고 싶은 것, 해 보고 싶은 일, 바뀌고 싶은 부분 무엇이든 좋습니다."></textarea></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="leg-num">5</span> 공동체 생활과 동의</legend>
+          <div class="fields">
+            <div class="field full consent">
+              <label class="check"><input type="checkbox" name="agree_live"><span><b>숙식 · 공동체 생활에 함께하겠습니다.</b><br>
+                학사관 거주와 숙식 제공, 공동체 생활의 리듬(예배 · 식사 · 나눔)에 함께하는 것에 동의합니다.</span></label>
+            </div>
+            <div class="field full consent">
+              <label class="check"><input type="checkbox" name="agree_privacy" required><span><b>개인정보 수집 · 이용에 동의합니다. <i>필수</i></b><br>
+                별무리 교육연구소는 러닝 홀리데이 지원자 선발을 위해 이름, 생년월일, 연락처, 이메일, 거주지, 소속, 지원서 응답 내용을 수집 · 이용합니다.
+                목적은 지원서 검토, 면담 안내, 선발 결과 통보 및 프로그램 운영이며, 수집일로부터 1년간 보관한 뒤 파기합니다(지원자 요청 시 즉시 파기).
+                동의를 거부할 수 있으며, 이 경우 지원이 제한될 수 있습니다. 문의: 조은길 010-4517-4164.</span></label>
+            </div>
+            <div class="field full consent">
+              <label class="check"><input type="checkbox" name="newsletter"><span>향후 별무리 교육연구소의 모집 · 소식 안내를 받겠습니다. <em>(선택)</em></span></label>
+            </div>
+            <label class="field full"><span>하고 싶은 말</span><textarea name="message_extra" rows="3" maxlength="2000" placeholder="위 문항에 담지 못한 이야기가 있으면 적어 주세요."></textarea></label>
+          </div>
+        </fieldset>
+
+        <div class="hp" aria-hidden="true">
+          <label>이 칸은 비워 두세요 <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div id="form-error" class="form-error" role="alert" hidden></div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn primary big" id="submit-btn">지원서 제출하기</button>
+          <p>제출하면 접수 번호가 화면에 나옵니다. 개인정보는 선발 목적으로만 사용합니다.</p>
+        </div>
+      </form>
+
+      <div id="done" class="done" hidden aria-live="polite">
+        <div class="done-top">
+          <span class="done-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13l5 5L21 6" fill="none" stroke="#111" stroke-width="4" stroke-linecap="square"/></svg></span>
+          <div>
+            <h2>지원서가 접수되었습니다</h2>
+            <p>지원해 주셔서 감사합니다. 아래 접수 번호를 꼭 저장해 주세요.</p>
+          </div>
+        </div>
+        <div class="receipt">
+          <span>접수 번호</span>
+          <strong id="receipt-no">LH-2027-0000</strong>
+          <span id="receipt-when" class="dim"></span>
+        </div>
+        <dl class="done-facts">
+          <div><dt>이름</dt><dd id="done-name">—</dd></div>
+          <div><dt>지원 구분</dt><dd id="done-category">—</dd></div>
+          <div><dt>희망 파트</dt><dd id="done-part">—</dd></div>
+          <div><dt>상태</dt><dd><span class="state-chip on">접수완료</span></dd></div>
+        </dl>
+        <p class="done-note">서류 검토와 면담 일정은 정해지는 대로 개별 연락드립니다. 문의: 조은길 010-4517-4164</p>
+        <div class="done-actions">
+          <button type="button" class="btn" id="print-receipt">접수 확인서 인쇄 · 저장</button>
+          <a class="btn primary" href="./">처음으로</a>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
-<footer class="foot">별무리 개발자들이 함께 만들고 나누는 공간 · <a href="https://apps.bmrschool.net/">BMR APPS</a></footer>
+
+<!-- ================= 관리자 ================= -->
+<div id="admin-view" class="admin-view" hidden>
+  <div class="wrap">
+    <div class="admin-head">
+      <div>
+        <span class="eyebrow blue">관리자</span>
+        <h1>📋 지원자 관리</h1>
+      </div>
+      <button type="button" class="btn ghost" data-close="admin">닫기</button>
+    </div>
+    <div id="admin-body"></div>
+  </div>
+</div>
+
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <div>
+      <b>별무리 교육연구소 · 청년 과정 L.H</b>
+      <p>충남 금산 · 별무리 공동체 · 문의 조은길 010-4517-4164</p>
+    </div>
+    <div class="foot-links">
+      <a href="https://apps.bmrschool.net/" rel="noopener">BMR APPS</a>
+      <button type="button" class="linkish" data-open="admin">지원자 관리</button>
+    </div>
+  </div>
+</footer>
+
+<noscript><p class="noscript">지원서를 내려면 브라우저에서 자바스크립트를 켜 주세요. 문의: 조은길 010-4517-4164</p></noscript>
 <script type="module" src="/src/main.js"></script>
 </body>
 </html>
