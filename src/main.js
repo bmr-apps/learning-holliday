@@ -13,18 +13,24 @@ const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const won = (v) => String(v ?? '').replace(/\s+/g, ' ').trim();
 
+/* ---------------- 모집 기간 ---------------- */
+const RECRUIT_START = new Date('2026-12-01T00:00:00+09:00');
+const RECRUIT_END = new Date('2027-01-01T00:00:00+09:00');
+const recruitOpen = () => {
+  const t = Date.now();
+  return t >= RECRUIT_START.getTime() && t < RECRUIT_END.getTime();
+};
+
 /* ---------------- 모집 상태 표시 ---------------- */
 (function recruitState() {
   const el = $('#recruit-state');
   if (!el) return;
   const now = new Date();
-  const start = new Date('2026-12-01T00:00:00+09:00');
-  const end = new Date('2027-01-01T00:00:00+09:00');
-  if (now >= start && now < end) {
+  if (recruitOpen()) {
     el.textContent = '모집 중 · 2026.12.1 ~ 12.31';
     el.classList.add('on');
-  } else if (now < start) {
-    const days = Math.ceil((start - now) / 86400000);
+  } else if (now < RECRUIT_START) {
+    const days = Math.ceil((RECRUIT_START - now) / 86400000);
     el.textContent = `모집 시작 D-${days}`;
   } else {
     el.textContent = '모집 기간 종료';
@@ -38,6 +44,23 @@ const errorBox = $('#form-error');
 const submitBtn = $('#submit-btn');
 
 if (form) {
+  // 모집 기간이 아니면 지원서 대신 안내를 보여 줍니다 (12/1 00:00 이전, 12/31 이후)
+  if (!recruitOpen()) {
+    form.hidden = true;
+    const closed = $('#apply-closed');
+    if (closed) {
+      closed.hidden = false;
+      if (Date.now() >= RECRUIT_END.getTime()) {
+        const title = $('#apply-closed-title');
+        if (title) title.textContent = '이번 모집이 마감되었습니다';
+        const msg = $('#apply-closed-msg');
+        if (msg) msg.innerHTML = '모집 기간(2026. 12. 1 ~ 12. 31)이 끝났습니다. 다음 소식은 조은길 <a href="tel:+821045174164">010-4517-4164</a>로 문의해 주세요.';
+        const chip = $('.ac-chip', closed);
+        if (chip) chip.textContent = '모집 마감';
+      }
+    }
+  }
+
   const birth = form.elements.birth_date;
   if (birth) {
     const t = new Date();
@@ -56,6 +79,11 @@ if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (errorBox) errorBox.hidden = true;
+
+    if (!recruitOpen()) {
+      showError('모집 기간(2026. 12. 1 ~ 12. 31)에만 지원할 수 있습니다.');
+      return;
+    }
 
     // 간단한 스팸 차단: 숨긴 칸이 채워지면 제출하지 않습니다
     if (won(form.elements.website?.value)) {
@@ -99,7 +127,8 @@ if (form) {
     } catch (err) {
       const msg = String(err?.message || '');
       let friendly = '접수하지 못했습니다. 잠시 뒤 다시 시도해 주세요.';
-      if (msg.includes('개인정보')) friendly = msg;
+      if (msg.includes('모집 기간')) friendly = msg;
+      else if (msg.includes('개인정보')) friendly = msg;
       else if (msg.includes('꼭 적어')) friendly = msg;
       else if (msg.includes('골라')) friendly = msg;
       else if (msg.includes('몰리고')) friendly = msg;
