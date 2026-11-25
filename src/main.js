@@ -50,6 +50,8 @@ if (form) {
     const closed = $('#apply-closed');
     if (closed) {
       closed.hidden = false;
+      const lead = $('#apply-lead');
+      if (lead) lead.textContent = '지원서는 모집 기간에 이 페이지에서 작성·제출할 수 있습니다. 작성 시간은 약 15분입니다.';
       if (Date.now() >= RECRUIT_END.getTime()) {
         const title = $('#apply-closed-title');
         if (title) title.textContent = '이번 모집이 마감되었습니다';
