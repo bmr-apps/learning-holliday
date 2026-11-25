@@ -507,8 +507,9 @@ input:user-invalid, textarea:user-invalid { border-color: #B91C1C; background: #
 .done-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
 
 /* ---------------- 관리자 ---------------- */
-.admin-view { padding: 40px 0 80px; }
+.admin-view { padding: 40px 0 80px; min-height: calc(100vh - 220px); }
 .admin-view[hidden] { display: none; }
+body.admin-open .head-nav, body.admin-open .head-actions .btn.primary { display: none; }
 .admin-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
 .admin-head h1 { font-size: clamp(26px, 4vw, 34px); }
 .login-card {
