@@ -1,0 +1,12 @@
+{
+  "slug": "learning-holliday",
+  "name": "별무리 러닝 홀리데이",
+  "schema": "learning_holliday",
+  "db_role": "learning_holliday_dev",
+  "bucket": "learning-holliday",
+  "function": "learning-holliday-fn",
+  "secret_prefix": "LEARNING_HOLLIDAY_",
+  "supabase_ref": "psupfmarnyxontorftio",
+  "url": "https://apps.bmrschool.net/learning-holliday/",
+  "template": "bmr-app-templates v2"
+}

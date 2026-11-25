@@ -1,0 +1,60 @@
+name: GitHub Pages 배포
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: DB 자동 반영 (supabase/migrations)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          # DATABASE_URL Secret 이 있으면 supabase/migrations 의 새 SQL 파일을 DB 에 반영한다.
+          # Secret 이 없는 앱(이전에 만든 앱)은 건너뛰고 안내만 남긴다 — 배포는 그대로 진행된다.
+          if [ -z "$DATABASE_URL" ]; then
+            {
+              echo '### DB 반영: 건너뜀'
+              echo 'DATABASE_URL Secret 이 없어 마이그레이션을 건너뛰었습니다. 배포는 정상입니다.'
+              echo '새 앱은 허브가 자동으로 넣어 줍니다. DB 비밀번호를 새로 발급했다면 저장소 Settings → Secrets and variables → Actions 에서 DATABASE_URL 을 새 값으로 바꿔 주세요.'
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if ! npm run db:migrate; then
+            {
+              echo '### DB 반영: 실패'
+              echo 'SQL 오류라면 supabase/migrations 의 파일을 고치고 새 파일로 다시 올리세요.'
+              echo '연결 오류(비밀번호)라면 Settings → Secrets and variables → Actions 의 DATABASE_URL 이 지금 DB 비밀번호인지 확인하세요.'
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+      - run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
